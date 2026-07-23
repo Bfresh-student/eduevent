@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>À Propos - ÉduEvent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,500;1,600&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body class="about-page">
+    <a href="#main-content" class="skip-link">Aller au contenu</a>
+    <!-- HEADER UNIFIÉ -->
+    <header>
+      <div class="container header-container">
+        <div class="logo">
+          <img src="images/logo.svg" alt="ÉduEvent" class="logo-image" />
+          <span class="logo-text">ÉduEvent</span>
+        </div>
+
+        <nav class="nav" id="nav-menu">
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="evenements.html">Événements</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="a-propos.html" class="active">À propos</a></li>
+          </ul>
+          <div class="mobile-action">
+            <a href="profil.html" class="btn-pill btn-blue auth-action-btn">Se connecter</a>
+          </div>
+        </nav>
+
+        <div class="header-action">
+          <a href="profil.html" class="btn-pill btn-blue auth-action-btn">Se connecter</a>
+        </div>
+
+        <button
+          class="menu-toggle"
+          id="menu-toggle-btn"
+          aria-label="Ouvrir le menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content" class="about-main">
+      <!-- 1. PRÉSENTATION DE LA PLATEFORME -->
+      <section class="about-hero">
+        <div class="container">
+          <div class="about-hero-content">
+            <span class="section-tagline">Qui sommes-nous ?</span>
+            <h1 class="about-title">
+              Faciliter l'accès aux savoirs <br />et à la
+              <span class="serif-italic">vie étudiante.</span>
+            </h1>
+            <p class="about-desc">
+              ÉduEvent est une plateforme universitaire conçue pour centraliser,
+              simplifier et dynamiser l'accès aux événements académiques et
+              extrascolaires. Que vous cherchiez à participer à des conférences
+              internationales, des ateliers pratiques ou des tournois sportifs,
+              ÉduEvent vous accompagne tout au long de votre parcours
+              universitaire.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. PRÉSENTATION DE L'ÉQUIPE -->
+      <section class="team-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tagline">Derrière le projet</span>
+            <h2 class="section-title">
+              Rencontrez notre <span class="serif-italic">équipe.</span>
+            </h2>
+          </div>
+
+          <div class="team-grid">
+            <!-- Membre 1 -->
+            <div class="team-card">
+              <div class="team-avatar">
+                <img
+                  src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=300&q=80"
+                  alt="GEORGES Sandasha" />
+              </div>
+              <h3>GEORGES Sandasha</h3>
+              <p class="team-role">Développeuse web</p>
+            </div>
+            <!-- Membre 2 -->
+            <div class="team-card">
+              <div class="team-avatar">
+                <img
+                  src="images/Bfresh.jpg"
+                  alt="BEAUCHARD Woodney Beker" />
+              </div>
+              <h3>BEAUCHARD Woodney Beker</h3>
+              <p class="team-role">UI/UX Designer, Développeur Web</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. FAQ ACCORDÉON -->
+      <section class="faq-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tagline">Des réponses à vos questions</span>
+            <h2 class="section-title">
+              Foire aux <span class="serif-italic">questions.</span>
+            </h2>
+          </div>
+
+          <div class="faq-accordion">
+            <!-- Question 1 -->
+            <div class="faq-item">
+              <button class="faq-trigger">
+                <span>Comment puis-je m'inscrire à un événement ?</span>
+                <svg
+                  class="faq-icon"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-content">
+                <p>
+                  Pour vous inscrire à un événement, connectez-vous à votre
+                  espace étudiant, parcourez notre liste d'événements, puis
+                  cliquez sur "S'inscrire". L'événement s'ajoutera
+                  automatiquement à votre profil.
+                </p>
+              </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="faq-item">
+              <button class="faq-trigger">
+                <span>L'accès aux événements est-il gratuit ?</span>
+                <svg
+                  class="faq-icon"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-content">
+                <p>
+                  La majorité des conférences et séminaires universitaires
+                  organisés sur ÉduEvent sont entièrement gratuits pour les
+                  étudiants. Certains ateliers spécifiques ou événements
+                  culturels peuvent toutefois nécessiter une participation
+                  financière indiquée sur la fiche de l'événement.
+                </p>
+              </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="faq-item">
+              <button class="faq-trigger">
+                <span>Puis-je annuler une inscription ?</span>
+                <svg
+                  class="faq-icon"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-content">
+                <p>
+                  Oui, vous pouvez annuler votre inscription à tout moment
+                  depuis votre tableau de bord étudiant (Page Profil) en
+                  cliquant sur le bouton "Annuler" correspondant à l'événement
+                  concerné.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. FORMULAIRE DE CONTACT & CARTE INTERACTIVE -->
+      <section class="contact-section">
+        <div class="container">
+          <div class="contact-grid">
+            <!-- Colonne Formulaire de Contact -->
+            <div class="contact-form-box">
+              <span class="section-tagline">Nous écrire</span>
+              <h3>Une question ? <br />Contactez-nous.</h3>
+
+              <!-- Message de succès de soumission simulé -->
+              <div id="contact-success" class="alert-success">
+                Merci ! Votre message a été transmis avec succès à notre équipe.
+              </div>
+
+              <form id="contact-form" novalidate>
+                <div class="form-group">
+                  <label for="contact-name">Nom complet</label>
+                  <input
+                    type="text"
+                    id="contact-name"
+                    placeholder="Ex: Alice Bertrand" />
+                  <span class="error-msg" id="error-contact-name"
+                    >Le nom est obligatoire.</span
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="contact-email">Adresse e-mail</label>
+                  <input
+                    type="email"
+                    id="contact-email"
+                    placeholder="Ex: alice@univ.fr" />
+                  <span class="error-msg" id="error-contact-email"
+                    >Saisissez un e-mail valide.</span
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="contact-message">Votre message</label>
+                  <textarea
+                    id="contact-message"
+                    rows="5"
+                    placeholder="Écrivez votre message ici..."></textarea>
+                  <span class="error-msg" id="error-contact-message"
+                    >Le message doit contenir au moins 10 caractères.</span
+                  >
+                </div>
+                <button type="submit" class="btn-pill btn-blue w-100">
+                  Envoyer le message
+                </button>
+              </form>
+            </div>
+
+            <!-- Colonne Carte Interactive -->
+            <div class="contact-map-box">
+              <span class="section-tagline">Où nous trouver</span>
+              <h3>Notre campus d'attache</h3>
+
+              <!-- Carte Interactive Google Maps Intégrée et Responsive -->
+              <div class="map-wrapper">
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7514.687302732056!2d-72.08009183406828!3d19.655338909038022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eb6ce8cee14f2f3%3A0x393e1286c52e1b74!2sUniversit%C3%A9%20d&#39;%C3%89tat%20d&#39;Ha%C3%AFti%20-%20Campus%20Henry%20Christophe%20de%20Limonade!5e0!3m2!1sfr!2sht!4v1783659865349!5m2!1sfr!2sht" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER UNIFIÉ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand-column">
+             <div class="logo">
+          <img src="images/logo.svg" alt="ÉduEvent" class="logo-image" />
+          <span class="logo-text">ÉduEvent</span>
+        </div>
+            <p class="footer-brand-desc">
+              Explorez le monde, organisez vos projets de voyage en groupe et
+              créez des souvenirs impérissables.
+            </p>
+            <div class="footer-socials">
+              <a href="#" aria-label="X (Twitter)">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+                  <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+                </svg>
+              </a>
+              <a href="#" aria-label="Instagram">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path
+                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="#" aria-label="LinkedIn">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-links-column">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="evenements.html">Événements</a></li>
+              <li><a href="profil.html">Profil</a></li>
+              <li><a href="a-propos.html" class="active">À propos</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-column">
+            <h4>Autres pages</h4>
+            <ul>
+              <li><a href="#">Partenaires</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2026 ÉduEvent. Tous droits réservés.
+          </p>
+          <div class="footer-legal-links">
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">Conditions d'utilisation</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPT POUR L'ACCORDÉON ET LA VALIDATION DU CONTACT -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

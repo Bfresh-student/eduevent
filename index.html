@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ÉduEvent</title>
+    <!-- Intégration des polices Google  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,500;1,600&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Aller au contenu</a>
+    <header>
+      <div class="container header-container">
+        <!-- Logo ÉduEvent -->
+        <div class="logo">
+          <img src="images/logo.svg" alt="ÉduEvent" class="logo-image" />
+          <span class="logo-text">ÉduEvent</span>
+        </div>
+
+        <!-- Navigation & Bouton Mobile -->
+        <nav class="nav" id="nav-menu">
+          <ul>
+            <li><a href="#" class="active">Accueil</a></li>
+            <li><a href="evenements.html">Événements</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+          </ul>
+          <!-- Bouton d'action dupliqué pour le menu mobile uniquement -->
+          <div class="mobile-action">
+            <a href="profil.html" class="btn-pill btn-blue auth-action-btn"
+              >Se connecter</a
+            >
+          </div>
+        </nav>
+
+        <!-- Bouton d'action pour le bureau uniquement -->
+        <div class="header-action">
+          <a href="profil.html" class="btn-pill btn-blue auth-action-btn"
+            >Se connecter</a
+          >
+        </div>
+
+        <!-- Bouton Menu Hamburger -->
+        <button
+          class="menu-toggle"
+          id="menu-toggle-btn"
+          aria-label="Ouvrir le menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- SECTION HERO-->
+      <section class="hero">
+        <!-- Dégradés de couleur d'ambiance en arrière-plan -->
+        <div class="glow glow-left"></div>
+        <div class="glow glow-right"></div>
+
+        <div class="container hero-container">
+          <!-- Texte & Formulaire -->
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Réserve ta place<br />aux événements<span class="serif-italic">
+                du campus</span
+              >
+            </h1>
+            <p class="hero-subtitle">
+              Participe aux activités étudiantes, conférences et rencontres qui
+              rythment la vie du campus.
+            </p>
+
+
+            <div class="hero-disclaimers">
+              <span>
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Pas besoin d'email etudiant .edu
+              </span>
+              <span>
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                réservations gratuites et sans engagement
+              </span>
+            </div>
+          </div>
+
+          <!-- Showcase visuel avec élévation et fade -->
+          <div class="hero-showcase">
+            <!-- Badges d'icônes flottantes (événement) -->
+            <div class="floating-flag flag-sweden" style="top: 10%; left: 10%">
+              <svg viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="48" fill="#4f46e5" />
+                <g
+                  transform="translate(24,24) scale(2.1)"
+                  fill="none"
+                  stroke="#ffffff"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                </g>
+              </svg>
+            </div>
+            <div class="floating-flag flag-uk" style="top: 12%; right: 28%">
+              <svg viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="48" fill="#f59e0b" />
+                <g
+                  transform="translate(22,22) scale(2.3)"
+                  fill="none"
+                  stroke="#ffffff"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M9 18V5l12-2v13" />
+                  <circle cx="6" cy="18" r="3" />
+                  <circle cx="18" cy="16" r="3" />
+                </g>
+              </svg>
+            </div>
+            <div class="floating-flag flag-belgium" style="top: 16%; right: 8%">
+              <svg viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="48" fill="#ec4899" />
+                <g
+                  transform="translate(23,23) scale(2.2)"
+                  fill="none"
+                  stroke="#ffffff"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M9 11H3v10a2 2 0 0 0 2 2h4v-6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v6h4a2 2 0 0 0 2-2V11h-6" />
+                  <path d="M9 11V4l3-2 3 2v7" />
+                </g>
+              </svg>
+            </div>
+            <div
+              class="floating-flag flag-france-bottom"
+              style="bottom: 8%; right: 25%">
+              <svg viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="48" fill="#10b981" />
+                <g
+                  transform="translate(23,23) scale(2.2)"
+                  fill="none"
+                  stroke="#ffffff"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M2 21h20" />
+                  <path d="M4 21V9l8-6 8 6v12" />
+                  <path d="M9 21v-6h6v6" />
+                </g>
+              </svg>
+            </div>
+            <div
+              class="floating-flag flag-australia"
+              style="bottom: 12%; left: 8%">
+              <svg viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="48" fill="#0ea5e9" />
+                <g
+                  transform="translate(23,23) scale(2.2)"
+                  fill="none"
+                  stroke="#ffffff"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M11 4H3v16h18V7l-3-3z" />
+                  <path d="M3 12h18" />
+                </g>
+              </svg>
+            </div>
+
+            <!-- Conteneur principal des cartes -->
+            <div class="cards-track">
+              <!-- Carte 1: Campus (Gauche, légèrement inclinée et transparente) -->
+              <div class="showcase-card card-left">
+                <span class="card-country-badge">🎓 Campus</span>
+                <img
+                  src="images/events/upsacale_this_image_2K_202607231407.jpeg"
+                  alt="Vie de campus" />
+                <div class="card-meta">
+                  <h3>Rentrée 2026 <span>&rsaquo;</span></h3>
+                  <div class="card-date-pill">Apr 30 - May 5</div>
+                </div>
+              </div>
+
+              <!-- Carte 2: Téléphone Mockup (Centre - Conférence) -->
+              <div class="phone-mockup">
+                <div class="phone-screen">
+                  <div class="phone-header">
+                    <span class="phone-time">9:41</span>
+                    <div class="phone-tabs">
+                      <span class="tab active">Active</span>
+                      <span class="tab">Past</span>
+                    </div>
+                    <span class="phone-add">+</span>
+                  </div>
+                  <div class="phone-card-body">
+                    <span class="card-country-badge">Promotion</span>
+                    <img
+                      src="images/events/upscale_this_image_2K_202607231313.jpeg"
+                      alt="Promotion" />
+                    <div class="card-meta">
+                      <h3>Photo de la promotion<span>&rsaquo;</span></h3>
+                      <div class="card-date-pill">30 avril 2026</div>
+                    </div>
+                  </div>
+                  <div class="phone-bottom-indicator"></div>
+                </div>
+              </div>
+
+              <!-- Carte 3: Concert (Droite) -->
+              <div class="showcase-card card-right">
+                <span class="card-country-badge">Graduation</span>
+                <img
+                  src="images/events/upscale_this_image_2K_202607231314 (1).jpeg"
+                  alt="Concert du campus" />
+                <div class="card-meta">
+                  <h3>Graduation<span>&rsaquo;</span></h3>
+                  <div class="card-date-pill">Apr 30 - May 5</div>
+                </div>
+              </div>
+
+              <!-- Carte 4: Soirée étudiante (Extrême Droite, coupée et transparente) -->
+              <div class="showcase-card card-far-right">
+                <span class="card-country-badge">Conference</span>
+                <img
+                  src="images/events/Upscale_this_image_2K_202607231420.jpeg"
+                  alt="Soirée étudiante" />
+                <div class="card-meta">
+                  <h3>Tech for peace<span>&rsaquo;</span></h3>
+                  <div class="card-date-pill">30 Avril 2026</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Effet de dégradé au bas pour fondre les cartes dans le blanc/crème -->
+            <div class="bottom-fade-overlay"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- sections  Events -->
+      <section class="events">
+        <div class="container">
+          <!-- En-tête de section structuré et élégant -->
+          <div class="section-header">
+            <span class="section-tagline">Prochaines expériences</span>
+            <h2 class="section-title">
+              Découvrez nos événements
+              <span class="serif-italic">vedettes.</span>
+            </h2>
+          </div>
+
+          <div class="event-list" id="home-events-container">
+            <!-- Événement 1 (Vedette) -->
+            <div class="event-row featured">
+              <!-- Date en format Calendrier Épuré -->
+              <div class="event-date-block">
+                <span class="day-name">Ven</span>
+                <span class="day-number">15</span>
+                <span class="month-year">Juin 2026</span>
+              </div>
+
+              <!-- Détails de l'événement -->
+              <div class="event-content">
+                <div class="event-meta-top">
+                  <span class="event-badge badge-featured">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="currentColor">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                    Vedette
+                  </span>
+                  <span class="event-time">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <rect
+                        x="3"
+                        y="4"
+                        width="18"
+                        height="18"
+                        rx="2"
+                        ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    09:00 - 17:00
+                  </span>
+                </div>
+
+                <h3 class="event-row-title">
+                  Conférence internationale sur les innovations éducatives
+                </h3>
+
+                <p class="event-location">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  Paris, France
+                </p>
+
+                <p class="event-desc">
+                  Découvrez les dernières innovations et méthodes
+                  d'apprentissage lors de cette conférence exceptionnelle
+                  réunissant des experts internationaux.
+                </p>
+
+                <div class="event-footer">
+                  <span class="event-price price-free">Gratuit</span>
+                  <a href="#" class="btn-text">
+                    En savoir plus
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Image avec effet Zoom -->
+              <div class="event-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80"
+                  alt="Conférence" />
+              </div>
+            </div>
+
+            <!-- Événement 2 -->
+            <div class="event-row">
+              <div class="event-date-block">
+                <span class="day-name">Mer</span>
+                <span class="day-number">20</span>
+                <span class="month-year">Juin 2026</span>
+              </div>
+
+              <div class="event-content">
+                <div class="event-meta-top">
+                  <span class="event-time">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <rect
+                        x="3"
+                        y="4"
+                        width="18"
+                        height="18"
+                        rx="2"
+                        ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    14:00 - 18:00
+                  </span>
+                </div>
+
+                <h3 class="event-row-title">
+                  Atelier interactif de développement personnel
+                </h3>
+
+                <p class="event-location">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  Lyon, France
+                </p>
+
+                <p class="event-desc">
+                  Un atelier interactif conçu pour apprendre à mieux gérer son
+                  temps, fixer des objectifs clairs et libérer son plein
+                  potentiel professionnel.
+                </p>
+
+                <div class="event-footer">
+                  <span class="event-price">45 €</span>
+                  <a href="#" class="btn-text">
+                    Réserver ma place
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="event-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80"
+                  alt="Atelier" />
+              </div>
+            </div>
+
+            <div class="event-row">
+              <div class="event-date-block">
+                <span class="day-name">Mer</span>
+                <span class="day-number">20</span>
+                <span class="month-year">Juin 2026</span>
+              </div>
+
+              <div class="event-content">
+                <div class="event-meta-top">
+                  <span class="event-time">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <rect
+                        x="3"
+                        y="4"
+                        width="18"
+                        height="18"
+                        rx="2"
+                        ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    14:00 - 18:00
+                  </span>
+                </div>
+
+                <h3 class="event-row-title">
+                  Atelier interactif de développement personnel
+                </h3>
+
+                <p class="event-location">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  Lyon, France
+                </p>
+
+                <p class="event-desc">
+                  Un atelier interactif conçu pour apprendre à mieux gérer son
+                  temps, fixer des objectifs clairs et libérer son plein
+                  potentiel professionnel.
+                </p>
+
+                <div class="event-footer">
+                  <span class="event-price">45 €</span>
+                  <a href="#" class="btn-text">
+                    Réserver ma place
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="event-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80"
+                  alt="Atelier" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="stats">
+        <div class="container">
+          <!-- Statistique 1 -->
+          <div class="stat stat-animate">
+            <h3>Événements organisés</h3>
+            <p class="stat-number" data-target="150">0+</p>
+          </div>
+
+          <!-- Statistique 2 -->
+          <div class="stat stat-animate">
+            <h3>Participants</h3>
+            <p class="stat-number" data-target="10000">0+</p>
+          </div>
+
+          <!-- Statistique 3 -->
+          <div class="stat stat-animate">
+            <h3>Villes couvertes</h3>
+            <p class="stat-number" data-target="20">0+</p>
+          </div>
+        </div>
+      </section>
+      <section class="newsletters">
+        <div class="container">
+          <div class="newsletter-card">
+            <!-- Halo lumineux interne -->
+            <div class="newsletter-inner-glow"></div>
+
+            <!-- Boussole rotative décorative en arrière-plan (TrueNorth theme) -->
+            <div class="rotating-compass-bg">
+              <svg
+                width="360"
+                height="360"
+                viewBox="0 0 100 100"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="45"
+                  stroke="currentColor"
+                  stroke-width="0.5"
+                  stroke-dasharray="3 3" />
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="30"
+                  stroke="currentColor"
+                  stroke-width="0.5" />
+                <polygon points="50,15 54,46 50,50" fill="currentColor" />
+                <polygon
+                  points="50,15 46,46 50,50"
+                  fill="currentColor"
+                  opacity="0.5" />
+                <polygon
+                  points="50,85 46,54 50,50"
+                  fill="currentColor"
+                  opacity="0.7" />
+                <polygon
+                  points="50,85 54,54 50,50"
+                  fill="currentColor"
+                  opacity="0.3" />
+                <polygon
+                  points="85,50 54,46 50,50"
+                  fill="currentColor"
+                  opacity="0.8" />
+                <polygon
+                  points="85,50 54,54 50,50"
+                  fill="currentColor"
+                  opacity="0.4" />
+                <polygon
+                  points="15,50 46,54 50,50"
+                  fill="currentColor"
+                  opacity="0.6" />
+                <polygon
+                  points="15,50 46,46 50,50"
+                  fill="currentColor"
+                  opacity="0.2" />
+              </svg>
+            </div>
+
+            <span class="newsletter-tag">Abonnement</span>
+            <h2 class="newsletter-title">
+              Recevez les nouveautés <br />directement dans
+              <span class="serif-italic">votre boîte.</span>
+            </h2>
+            <p class="newsletter-desc">
+              Rejoignez notre communauté pour recevoir les derniers événements,
+              des guides exclusifs et des invitations en avant-première.
+            </p>
+
+            <form class="newsletter-form">
+              <div class="newsletter-input-group">
+                <!-- INPUT EN PREMIER pour permettre l'animation de l'icône via le sélecteur CSS "+" -->
+                <input
+                  type="email"
+                  placeholder="Votre adresse e-mail"
+                  required />
+
+                <!-- ICÔNE EN DEUXIÈME -->
+                <svg
+                  class="mail-icon"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <button type="submit" class="btn-pill btn-blue">S'abonner</button>
+            </form>
+
+            <span class="newsletter-disclaimer"
+              >Respect de votre vie privée. Désinscription en un clic.</span
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <!-- Zone Supérieure : Logo, description, réseaux et liens -->
+        <div class="footer-top">
+          <!-- Colonne Marque -->
+          <div class="footer-brand-column">
+            <div class="logo">
+              <img src="images/logo.svg" alt="ÉduEvent" class="logo-image" />
+              <span class="logo-text">ÉduEvent</span>
+            </div>
+            <p class="footer-brand-desc">
+              Explorez le monde, organisez vos projets de voyage en groupe et
+              créez des souvenirs impérissables.
+            </p>
+
+            <!-- Icônes des Réseaux Sociaux (SVG Épurés) -->
+            <div class="footer-socials">
+              <!-- X / Twitter -->
+              <a href="#" aria-label="X (Twitter)">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+                  <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+                </svg>
+              </a>
+              <!-- Instagram -->
+              <a href="#" aria-label="Instagram">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path
+                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <!-- LinkedIn -->
+              <a href="#" aria-label="LinkedIn">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Colonne de Liens 1 (Navigation) -->
+          <div class="footer-links-column">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="evenements.html">Événements</a></li>
+              <li><a href="profil.html">Profil</a></li>
+              <li><a href="a-propos.html">À propos</a></li>
+            </ul>
+          </div>
+
+          <!-- Colonne de Liens 2 (Compagnie) -->
+          <div class="footer-links-column">
+            <h4>Autres pages</h4>
+            <ul>
+              <li><a href="#">Partenaires</a></li>
+              <li><a href="a-propos.html#contact-form">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Zone Inférieure : Copyright et Liens Juridiques -->
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2026 ÉduEvent. Tous droits réservés.
+          </p>
+          <div class="footer-legal-links">
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">Conditions d'utilisation</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/evenements.js"></script>
+  </body>
+</html>

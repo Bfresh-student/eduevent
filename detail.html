@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Détails de l'événement - ÉduEvent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,500;1,600&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body class="details-page">
+    <a href="#main-content" class="skip-link">Aller au contenu</a>
+    <!-- HEADER UNIFIÉ -->
+    <header>
+      <div class="container header-container">
+        <div class="logo">
+          <img src="images/logo.svg" alt="ÉduEvent" class="logo-image" />
+          <span class="logo-text">ÉduEvent</span>
+        </div>
+
+        <nav class="nav" id="nav-menu">
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="evenements.html">Événements</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+          </ul>
+          <div class="mobile-action">
+            <a href="profil.html" class="btn-pill btn-blue auth-action-btn"
+              >Se connecter</a
+            >
+          </div>
+        </nav>
+
+        <div class="header-action">
+          <a href="profil.html" class="btn-pill btn-blue auth-action-btn"
+            >Se connecter</a
+          >
+        </div>
+
+        <button
+          class="menu-toggle"
+          id="menu-toggle-btn"
+          aria-label="Ouvrir le menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content" class="details-main">
+      <div class="container">
+        <!-- Bouton Retour -->
+        <div class="back-navigation">
+          <a href="evenements.html" class="back-link">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Retour aux événements
+          </a>
+        </div>
+
+        <!-- BANNIÈRE IMMERSIVE -->
+        <section class="event-banner">
+          <img
+            id="event-image"
+            src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1600&q=80"
+            alt="Bannière de la conférence"
+            loading="lazy" />
+          <div id="event-category" class="banner-overlay-badge">Conférence</div>
+        </section>
+
+        <!-- CONTENU DE L'ÉVÉNEMENT EN GRILLE -->
+        <div class="details-grid">
+          <!-- COLONNE GAUCHE : DESCRIPTION & COMMENTAIRES -->
+          <div class="details-content-left">
+            <h1 id="event-title" class="event-main-title">
+              Conférence internationale sur les innovations éducatives
+            </h1>
+
+            <div class="event-long-description">
+              <p>
+                Rejoignez-nous pour une conférence passionnante sur les
+                dernières tendances en matière d'éducation. Des experts de
+                renommée internationale partageront leurs connaissances et
+                retours d'expériences pratiques pour inspirer et informer les
+                participants sur les outils d'apprentissage de demain.
+              </p>
+              <p>
+                Au programme : tables rondes sur l'intelligence artificielle
+                dans l'enseignement, ateliers de pédagogie active et
+                opportunités de réseautage avec des chercheurs, professeurs et
+                étudiants passionnés.
+              </p>
+            </div>
+
+            <!-- COMPTEUR DE PLACES RESTANTES DYNAMIQUE -->
+            <div class="seats-counter-card">
+              <div class="seats-counter-header">
+                <span class="seats-label">Places disponibles</span>
+                <span class="seats-fraction" id="seats-display">14 / 50</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div
+                  class="progress-bar-fill"
+                  id="seats-progress-bar"
+                  style="width: 28%"></div>
+              </div>
+              <p class="seats-warning-msg" id="seats-warning">
+                Attention, plus que quelques places disponibles pour cet
+                événement !
+              </p>
+            </div>
+          </div>
+
+          <!-- COLONNE DROITE : INFOS PRATIQUES, FORMULAIRE & PARTAGE (STICKY) -->
+          <div class="details-sidebar-right">
+            <!-- Boîte Infos Pratiques & Formulaire d'Inscription -->
+            <div class="sidebar-widget">
+              <h3>Informations Pratiques</h3>
+
+              <div class="practical-details-list">
+                <div class="practical-item">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect
+                      x="3"
+                      y="4"
+                      width="18"
+                      height="18"
+                      rx="2"
+                      ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                  <div>
+                    <span class="info-title">Date et Heure</span>
+                    <span id="event-date" class="info-desc"
+                      >Vendredi 15 juin 2026 &bull; 09:00 - 17:00</span
+                    >
+                  </div>
+                </div>
+
+                <div class="practical-item">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <div>
+                    <span class="info-title">Lieu</span>
+                    <span id="event-location" class="info-desc"
+                      >Grand Amphithéâtre, Paris, France</span
+                    >
+                  </div>
+                </div>
+
+                <div class="practical-item">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  <div>
+                    <span class="info-title">Organisateur</span>
+                    <span class="info-desc"
+                      >Faculté des Sciences & ÉduEvent</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- FORMULAIRE D'INSCRIPTION INTELLIGENT -->
+              <div
+                class="registration-form-box"
+                id="registration-form-container">
+                <h4 class="form-title">S'inscrire à cet événement</h4>
+
+                <!-- Alerte de succès -->
+                <div class="registration-success-alert" id="reg-success">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  <div>
+                    <h5>Inscription validée !</h5>
+                    <p>
+                      Votre place est réservée. Un e-mail contenant votre billet
+                      vient d'être envoyé.
+                    </p>
+                  </div>
+                </div>
+
+                <form id="event-reg-form" novalidate>
+                  <div class="form-group">
+                    <label for="reg-name">Nom complet</label>
+                    <input
+                      type="text"
+                      id="reg-name"
+                      placeholder="Ex: Jean Dupont" />
+                    <span class="error-msg" id="error-reg-name"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="reg-email">E-mail</label>
+                    <input
+                      type="email"
+                      id="reg-email"
+                      placeholder="nom@etudiant.fr" />
+                    <span class="error-msg" id="error-reg-email"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="reg-phone">Téléphone</label>
+                    <input
+                      type="tel"
+                      id="reg-phone"
+                      placeholder="06 12 34 56 78" />
+                    <span class="error-msg" id="error-reg-phone"></span>
+                  </div>
+                  <button type="submit" class="btn-pill btn-blue w-100 mt-10">
+                    Confirmer mon inscription
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            <!-- SECTION COMMENTAIRES & TÉMOIGNAGES -->
+            <section class="comments-section">
+              <h3>Commentaires (<span id="comments-count">2</span>)</h3>
+
+              <!-- Formulaire d'ajout de commentaire -->
+              <form id="comment-form" class="comment-form" novalidate>
+                <div class="comment-input-wrapper">
+                  <textarea
+                    id="comment-text"
+                    rows="3"
+                    placeholder="Laissez un commentaire ou un témoignage..."
+                    required></textarea>
+                </div>
+                <button type="submit" class="btn-pill btn-blue">
+                  Soumettre
+                </button>
+              </form>
+
+              <!-- Liste des commentaires -->
+              <div class="comments-list" id="comments-list-container">
+                <div class="comment-item">
+                  <div class="comment-avatar">JD</div>
+                  <div class="comment-body">
+                    <div class="comment-meta">
+                      <span class="comment-author">John Doe</span>
+                      <span class="comment-date">Il y a 2 heures</span>
+                    </div>
+                    <p class="comment-text-content">
+                      C'est un événement très intéressant ! J'ai hâte d'assister
+                      à la table ronde sur l'intégration de l'IA.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="comment-item">
+                  <div class="comment-avatar">JS</div>
+                  <div class="comment-body">
+                    <div class="comment-meta">
+                      <span class="comment-author">Jane Smith</span>
+                      <span class="comment-date">Il y a 1 jour</span>
+                    </div>
+                    <p class="comment-text-content">
+                      Merci pour cette opportunité d'apprendre et de réseauter
+                      avec des universitaires.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- PARTAGE SUR LES RÉSEAUX SOCIAUX (ICÔNES ÉPURÉES SVG) -->
+            <div class="sidebar-widget social-share-widget">
+              <h3>Partager cet événement</h3>
+              <div class="share-icons">
+                <a href="#" aria-label="Partager sur Facebook">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                  </svg>
+                </a>
+                <a href="#" aria-label="Partager sur X (Twitter)">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+                    <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+                  </svg>
+                </a>
+                <a href="#" aria-label="Partager sur LinkedIn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </a>
+                <a href="#" aria-label="Partager sur WhatsApp">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER UNIFIÉ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand-column">
+            <div class="logo">
+              <img src="images/logo.svg" alt="ÉduEvent" class="logo-image" />
+              <span class="logo-text">ÉduEvent</span>
+            </div>
+            <p class="footer-brand-desc">
+              Explorez le monde, organisez vos projets de voyage en groupe et
+              créez des souvenirs impérissables.
+            </p>
+            <div class="footer-socials">
+              <a href="#" aria-label="X (Twitter)">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+                  <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+                </svg>
+              </a>
+              <a href="#" aria-label="Instagram">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path
+                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="#" aria-label="LinkedIn">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-links-column">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="evenements.html">Événements</a></li>
+              <li><a href="profil.html">Profil</a></li>
+              <li><a href="#">Détails</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-column">
+            <h4>Autres pages</h4>
+            <ul>
+              <li><a href="#">Partenaires</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2026 ÉduEvent. Tous droits réservés.
+          </p>
+          <div class="footer-legal-links">
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">Conditions d'utilisation</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- LOGIQUE DE RESERVATION DYNAMIQUE, PLACES RESTANTES ET GESTION DES COMMENTAIRES -->
+    <script src="js/main.js"></script>
+    <script src="js/detail.js"></script>
+  </body>
+</html>

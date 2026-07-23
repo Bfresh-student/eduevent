@@ -1,0 +1,777 @@
+/* === MEDIA QUERIES === */
+
+/* --- Tablet / Large Screen Breakpoints (Up to 992px) --- */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .card-far-right {
+    display: none; /* Prevents overflow layout shifts on tablet devices */
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .profile-card {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .details-sidebar-right {
+    position: static; /* Removes fixed/sticky positioning for better document flow */
+    order: -1; /* Places summary/actions top-most on smaller screens */
+  }
+
+  .event-banner {
+    height: 260px;
+  }
+}
+
+/* --- Desktop Navigation Adaptations (769px and Up) --- */
+@media (min-width: 769px) {
+  .header-action {
+    margin-right: 10px; /* Aligns header CTA actions gracefully on desktop layouts */
+  }
+}
+
+/* --- Mobile / Tablet Breakpoints (Up to 768px) --- */
+@media (max-width: 768px) {
+  /* Navigation & Mobile Drawer */
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hidden offscreen by default */
+    width: 280px;
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: -10px 0 40px rgba(15, 23, 42, 0.08);
+    padding: 100px 32px 40px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Positions the action button at the bottom */
+    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1050;
+  }
+
+  .nav.active {
+    right: 0; /* Standard transition to slide drawer into view */
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .nav ul li a {
+    font-size: 18px;
+    font-weight: 700;
+    display: block;
+    width: 100%;
+  }
+
+  .nav ul li a.active::after {
+    display: none; /* Removes active line indicator on mobile menu layout */
+  }
+
+  .nav ul li a.active {
+    color: var(--primary-blue);
+  }
+
+  .header-action {
+    display: none; /* Swaps desktop login button out for drawer action */
+    margin-right: 20px;
+  }
+
+  .nav .mobile-action {
+    display: block;
+    width: 100%;
+  }
+
+  .nav .mobile-action .btn-pill {
+    width: 100%;
+    text-align: center;
+    padding: 14px 0;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding-top: 50px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+    padding: 0 15px;
+  }
+
+  .hero-form {
+    margin: 0 20px 20px 20px;
+  }
+
+  /* Cards & Track Layouts */
+  .cards-track {
+    gap: 12px;
+  }
+
+  .showcase-card {
+    width: 140px;
+    height: 220px;
+  }
+
+  .phone-mockup {
+    width: 170px;
+    height: 290px;
+  }
+
+  .floating-flag {
+    display: none; /* Prevents visual clutter on smaller tap screens */
+  }
+
+  /* Events Layout */
+  .event-row {
+    flex-direction: column-reverse; /* Places image element above text block */
+    align-items: stretch;
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .event-date-block {
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    padding: 10px 15px;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .event-date-block .month-year {
+    margin-left: auto;
+  }
+
+  .event-image-wrapper {
+    width: 100%;
+    height: 180px;
+  }
+
+  /* List View to Grid View Mobile Fallbacks */
+  .event-list.list-view .event-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .event-list.list-view .card-img-container {
+    width: 100%;
+    height: 180px;
+  }
+
+  .event-list.list-view .card-info {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .event-list.list-view .card-text-block {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .view-toggle-group {
+    display: none; /* Hides toggle options on viewports that cannot fit dual modes */
+  }
+
+  /* Newsletter Form */
+  .newsletter-card {
+    padding: 40px 24px;
+    border-radius: 24px;
+  }
+
+  .newsletter-title {
+    font-size: 28px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .newsletter-input-group {
+    width: 100%;
+  }
+
+  .newsletter-card .btn-blue {
+    width: 100%;
+  }
+
+  /* Statistics */
+  .stats .container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* Auth, Forms & Registrations */
+  .auth-card {
+    padding: 24px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .form-row-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .registered-event-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .btn-cancel {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Contact & About Us */
+  .about-title {
+    font-size: 32px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-box {
+    padding: 30px 20px;
+  }
+
+  .map-wrapper {
+    height: 300px;
+  }
+
+  /* Footer Layout */
+  .site-footer {
+    padding: 60px 0 30px 0;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  .footer-brand-column {
+    max-width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column-reverse; /* Places copyright below secondary links */
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .footer-legal-links {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+}
+
+/* --- Mobile Portrait Breakpoints (Up to 576px) --- */
+@media (max-width: 576px) {
+  .auth-card {
+    padding: 20px;
+  }
+
+  .about-title {
+    font-size: 28px; /* Scales down size dynamically for smaller device viewports */
+  }
+
+  .contact-form-box,
+  .contact-map-box {
+    padding: 24px;
+  }
+}
+
+/* --- Ultra-Small / Micro-Device Breakpoints (Up to 480px) --- */
+@media (max-width: 480px) {
+  html {
+    font-size: 15px; /* Adjusts base REM unit scale for ultra-small systems */
+  }
+
+  .btn-pill {
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+
+  .event-banner {
+    height: 200px;
+  }
+
+  .banner-overlay-badge {
+    left: 12px;
+    bottom: 12px;
+    padding: 6px 10px;
+  }
+}
+/* Page À propos et Profil : ajustements mobile */
+@media (max-width: 992px) {
+  .profile-main-content,
+  .about-main {
+    padding-top: 48px;
+    padding-bottom: 72px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container { padding-inline: 16px; }
+  .header-container { height: 64px; }
+  .logo { margin-left: 0; font-size: 18px; }
+  .logo-image { width: 40px; height: 40px; }
+  .nav { width: min(86vw, 320px); max-width: 100%; padding: 88px 24px 32px; }
+
+  .auth-section { padding: 24px 16px; }
+  .auth-card { max-width: 100%; }
+  .profile-main-content { padding: 28px 0 56px; }
+  .profile-grid { gap: 20px; margin-top: 0; }
+  .profile-card,
+  .my-events-wrapper { width: 100%; max-width: none; padding: 24px 20px; }
+  .profile-academic-details,
+  .event-row-info,
+  .detail-value { min-width: 0; overflow-wrap: anywhere; }
+  .events-header-box { gap: 12px; }
+  .events-header-box h3 { font-size: 16px; }
+
+  .about-main { padding: 36px 0 64px; }
+  .about-title br,
+  .contact-form-box h3 br { display: none; }
+  .about-desc { font-size: 15px; line-height: 1.65; }
+  .team-section { padding: 56px 0; }
+  .faq-section { padding-bottom: 56px; }
+  .faq-accordion { margin-top: 28px; gap: 12px; }
+  .faq-trigger { padding: 18px; gap: 12px; font-size: 14px; }
+  .faq-trigger span { min-width: 0; }
+  .faq-icon { flex: 0 0 auto; }
+  .contact-form-box,
+  .contact-map-box { padding: 28px 20px; }
+
+  .form-group select {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .auth-card { padding: 20px; }
+  .auth-tabs { margin-bottom: 24px; }
+  .tab-btn { font-size: 13px; }
+  .auth-form-container h2,
+  .contact-form-box h3,
+  .contact-map-box h3 { font-size: 22px; }
+  .team-card { padding: 28px 20px; }
+  .contact-form-box,
+  .contact-map-box { padding: 22px 16px; }
+  .map-wrapper { height: 260px; }
+}
+
+@media (max-width: 480px) {
+  .profile-card,
+  .my-events-wrapper { padding: 20px 16px; }
+  .registered-event-row { padding: 16px; }
+  .events-header-box { align-items: flex-start; flex-direction: column; }
+  .events-count { align-self: flex-start; }
+}
+
+/* Hero : affichage fluide sur téléphones */
+@media (max-width: 768px) {
+  .hero { padding-top: 42px; }
+  .hero-content { margin-bottom: 32px; }
+  .hero-title { font-size: clamp(30px, 8vw, 40px); letter-spacing: -1px; }
+  .hero-subtitle { padding-inline: 0; margin-bottom: 24px; }
+  .hero-form { width: 100%; max-width: 440px; margin: 0 auto 18px; }
+  .hero-showcase { margin-top: 36px; padding-bottom: 32px; }
+  .cards-track { gap: 12px; padding-inline: 12px; }
+  .showcase-card { width: 110px; height: 180px; }
+  .phone-mockup { width: 150px; height: 255px; flex: 0 0 auto; }
+}
+
+@media (max-width: 540px) {
+  .hero { padding-top: 32px; }
+  .hero-disclaimers { flex-wrap: wrap; gap: 8px 14px; }
+  .hero-form { flex-direction: column; align-items: stretch; gap: 10px; padding: 10px; border-radius: 18px; }
+  .hero-form input[type="email"] { min-height: 44px; padding-inline: 8px; }
+  .hero-form button { width: 100%; }
+  .hero-showcase { margin-top: 28px; }
+  .showcase-card { display: none; }
+  .phone-mockup { width: min(62vw, 210px); height: auto; aspect-ratio: 25 / 42; }
+}
+
+@media (max-width: 360px) {
+  .hero-title { font-size: 29px; }
+  .hero-subtitle { font-size: 14px; }
+}
+
+/* Le contrôle conserve sa largeur, quelle que soit la longueur de l’option. */
+.form-group select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 44px;
+  background-image: linear-gradient(45deg, transparent 50%, #64748b 50%), linear-gradient(135deg, #64748b 50%, transparent 50%);
+  background-position: calc(100% - 20px) 50%, calc(100% - 14px) 50%;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+
+/* Fond unifié : même teinte que l’accueil. */
+.profile-page,
+.events-page,
+.about-page,
+.details-page {
+  background-color: var(--bg-light);
+}
+
+/* Footer Profil : reste correctement placé, y compris sur les petits écrans. */
+.profile-page {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-page .profile-main-content {
+  flex: 1 0 auto;
+  min-height: 0;
+}
+
+.profile-page .site-footer {
+  margin-top: auto;
+}
+
+.profile-page .site-footer .container {
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .profile-page .site-footer {
+    padding: 48px 0 28px;
+  }
+
+  .profile-page .site-footer .container {
+    margin: 0 auto;
+  }
+
+  .profile-page .footer-top {
+    gap: 28px;
+    margin-bottom: 32px;
+  }
+
+  .profile-page .footer-bottom {
+    padding-top: 20px;
+  }
+
+  /* Les éléments animés du hero restent disponibles sur mobile. */
+  .floating-flag {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+
+  .card-far-right {
+    display: block;
+  }
+
+  .cards-track {
+    justify-content: flex-start;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+    scrollbar-width: none;
+  }
+
+  .cards-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .showcase-card,
+  .phone-mockup {
+    scroll-snap-align: center;
+  }
+}
+
+@media (max-width: 540px) {
+  .hero-showcase {
+    overflow: hidden;
+  }
+
+  .cards-track {
+    padding: 12px 20px 24px;
+  }
+
+  .showcase-card {
+    display: block;
+    width: 96px;
+    height: 156px;
+    flex: 0 0 auto;
+  }
+
+  .phone-mockup {
+    width: 126px;
+    height: 212px;
+    aspect-ratio: auto;
+  }
+}
+
+/* Profil : même placement de footer que les autres pages. */
+.profile-page {
+  display: block;
+  min-height: 0;
+}
+
+.profile-page .profile-main-content {
+  flex: initial;
+  min-height: calc(100vh - 72px - 380px);
+}
+
+.profile-page .site-footer {
+  margin-top: 0;
+}
+
+.profile-page .site-footer .container {
+  margin: 20px 20px 0;
+}
+
+@media (max-width: 768px) {
+  .profile-page .site-footer {
+    padding: 60px 0 30px;
+  }
+
+  /* Chaque select reste contenu dans son parent, sur tout écran. */
+  select {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* Footer Profil : ancré en bas sans dépendre du formulaire actif. */
+.profile-page {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-page .profile-main-content {
+  flex: 1 0 auto;
+  min-height: 0;
+}
+
+.profile-page .site-footer {
+  margin-top: auto;
+}
+
+.profile-page .site-footer .container {
+  margin: 20px auto 0;
+}
+
+/* Texte du hero : lecture confortable et sans débordement sur téléphone. */
+@media (max-width: 768px) {
+  .hero-content {
+    width: min(100%, 620px);
+    margin-bottom: 30px;
+  }
+
+  .hero-title {
+    max-width: 100%;
+    font-size: clamp(2rem, 8.5vw, 2.5rem);
+    line-height: 1.13;
+    letter-spacing: -0.9px;
+    overflow-wrap: anywhere;
+    text-wrap: balance;
+  }
+
+  .hero-title .serif-italic {
+    white-space: normal;
+  }
+
+  .hero-subtitle {
+    max-width: 38rem;
+    margin-inline: auto;
+    font-size: clamp(0.94rem, 3.9vw, 1.05rem);
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-disclaimers {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-disclaimers span {
+    min-width: 0;
+    line-height: 1.45;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title br {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 9.2vw, 2.2rem);
+  }
+
+  .hero-subtitle {
+    font-size: 0.94rem;
+  }
+
+  .hero-disclaimers {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* La carte de connexion conserve une hauteur adaptée à son seul contenu. */
+.auth-card {
+  min-height: 0 !important;
+}
+
+/* Chaque élément du carrousel d’accueil reste lisible et proportionné. */
+@media (max-width: 768px) {
+  .cards-track {
+    width: 100%;
+    max-width: 100%;
+    align-items: flex-end;
+    box-sizing: border-box;
+  }
+
+  .showcase-card,
+  .phone-mockup {
+    min-width: 0;
+    flex: 0 0 auto;
+  }
+
+  .showcase-card {
+    border-radius: 18px;
+  }
+
+  .card-country-badge {
+    top: 8px;
+    left: 8px;
+    max-width: calc(100% - 16px);
+    padding: 4px 7px;
+    font-size: 9px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .card-meta {
+    padding: 12px 10px 10px;
+  }
+
+  .card-meta h3 {
+    font-size: 12px;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+
+  .card-date-pill {
+    padding: 3px 6px;
+    font-size: 8px;
+  }
+
+  .phone-mockup {
+    border-radius: 26px;
+    padding: 7px;
+  }
+
+  .phone-screen {
+    border-radius: 20px;
+  }
+
+  .phone-header {
+    padding: 9px 10px 7px;
+  }
+
+  .phone-time {
+    font-size: 9px;
+  }
+
+  .phone-tabs .tab {
+    padding: 2px 6px;
+    font-size: 8px;
+  }
+
+  .phone-card-body {
+    margin: 0 7px 7px;
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 540px) {
+  .cards-track {
+    gap: 10px;
+  }
+
+  .card-meta {
+    padding: 9px 8px 8px;
+  }
+
+  .card-meta h3 {
+    font-size: 10px;
+  }
+
+  .card-date-pill {
+    font-size: 7px;
+  }
+
+  .phone-header {
+    padding: 7px 8px 5px;
+  }
+
+  .phone-tabs .tab {
+    font-size: 7px;
+  }
+}
+
+/* Footer Profil : mêmes marges que les autres pages. */
+.profile-page .site-footer {
+  margin: 0;
+}
+
+.profile-page .site-footer .container {
+  margin: 20px 20px 0;
+}

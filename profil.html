@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mon Profil - ÉduEvent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,500;1,600&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body class="profile-page">
+    <a href="#main-content" class="skip-link">Aller au contenu</a>
+    <!-- HEADER STYLISÉ ET UNIFIÉ -->
+    <header>
+      <div class="container header-container">
+        <div class="logo">
+          <img src="images/logo.svg" alt="ÉduEvent" class="logo-image" />
+          <span class="logo-text">ÉduEvent</span>
+        </div>
+
+        <nav class="nav" id="nav-menu">
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="evenements.html">Événements</a></li>
+            <li><a href="profil.html" class="active">Profil</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+          </ul>
+          <div class="mobile-action">
+            <!-- Bouton dynamique d'en-tête mobile -->
+            <a href="profil.html" class="btn-pill btn-blue auth-action-btn"
+              >Se connecter</a
+            >
+          </div>
+        </nav>
+
+        <div class="header-action">
+          <!-- Bouton dynamique d'en-tête bureau -->
+          <a href="profil.html" class="btn-pill btn-blue auth-action-btn"
+            >Se connecter</a
+          >
+        </div>
+
+        <button
+          class="menu-toggle"
+          id="menu-toggle-btn"
+          aria-label="Ouvrir le menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content" class="profile-main-content">
+      <!-- 1. SECTION AUTHENTIFICATION (CONNEXION & INSCRIPTION) -->
+      <section id="auth-section" class="auth-section">
+        <div class="auth-card">
+          <div
+            id="registration-success-alert"
+            class="registration-success-alert"
+            role="status"
+            aria-live="polite">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M20 6L9 17l-5-5"></path>
+            </svg>
+            <div>
+              <h5>Compte créé avec succès</h5>
+              <p>
+                Vous pouvez maintenant vous connecter avec votre adresse e-mail.
+              </p>
+            </div>
+          </div>
+
+          <!-- Onglets sélecteurs -->
+          <div class="auth-tabs">
+            <button class="tab-btn active" id="tab-login-btn">Connexion</button>
+            <button class="tab-btn" id="tab-register-btn">Inscription</button>
+          </div>
+
+          <!-- Formulaire de Connexion -->
+          <div class="auth-form-container active" id="login-form-wrapper">
+            <h2>Ravi de vous revoir !</h2>
+            <p class="auth-subtitle">
+              Connectez-vous pour gérer vos événements.
+            </p>
+
+            <form id="login-form" novalidate>
+              <div class="form-group">
+                <label for="login-email">Adresse e-mail</label>
+                <input
+                  type="email"
+                  id="login-email"
+                  placeholder="nom@etudiant.fr" />
+                <span class="error-msg" id="error-login-email"></span>
+              </div>
+              <div class="form-group">
+                <label for="login-password">Mot de passe</label>
+                <input
+                  type="password"
+                  id="login-password"
+                  placeholder="••••••••" />
+                <span class="error-msg" id="error-login-password"></span>
+              </div>
+              <button type="submit" class="btn-pill btn-blue w-100">
+                Se connecter
+              </button>
+            </form>
+          </div>
+
+          <!-- Formulaire d'Inscription -->
+          <div class="auth-form-container" id="register-form-wrapper">
+            <h2>Créer un compte étudiant</h2>
+            <p class="auth-subtitle">
+              Rejoignez ÉduEvent et participez aux conférences.
+            </p>
+
+            <form id="register-form" novalidate>
+              <div class="form-row-grid">
+                <div class="form-group">
+                  <label for="reg-lastname">Nom</label>
+                  <input type="text" id="reg-lastname" placeholder="Dupont" />
+                  <span class="error-msg" id="error-reg-lastname"></span>
+                </div>
+                <div class="form-group">
+                  <label for="reg-firstname">Prénom</label>
+                  <input type="text" id="reg-firstname" placeholder="Jean" />
+                  <span class="error-msg" id="error-reg-firstname"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="reg-email">E-mail universitaire</label>
+                <input
+                  type="email"
+                  id="reg-email"
+                  placeholder="jean.dupont@etudiant.univ.fr" />
+                <span class="error-msg" id="error-reg-email"></span>
+              </div>
+
+              <div class="form-row-grid">
+                <div class="form-group">
+                  <label for="reg-password">Mot de passe</label>
+                  <input
+                    type="password"
+                    id="reg-password"
+                    placeholder="Min. 8 caractères" />
+                  <span class="error-msg" id="error-reg-password"></span>
+                </div>
+                <div class="form-group">
+                  <label for="reg-password-confirm">Confirmer</label>
+                  <input
+                    type="password"
+                    id="reg-password-confirm"
+                    placeholder="••••••••" />
+                  <span
+                    class="error-msg"
+                    id="error-reg-password-confirm"></span>
+                </div>
+              </div>
+
+              <div class="form-row-grid">
+                <div class="form-group">
+                  <label for="reg-faculty">Faculté</label>
+                  <select id="reg-faculty">
+                    <option value="">Sélectionnez</option>
+                    <option value="Faculté des Sciences et de génie">
+                      Sciences et génie
+                    </option>
+                    <option value="Faculté des sciences de la santé">
+                      Sciences de la santé
+                    </option>
+                    <option
+                      value="Faculté des Arts et des Sciences de l’Éducation">
+                      Arts et Sciences de l’Éducation
+                    </option>
+                    <option
+                      value="Faculté des Sciences de la Terre, de l’Environnement et de l’Aménagement du Territoire">
+                      Sciences de la Terre et Environnement
+                    </option>
+                    <option value="Faculté des Sciences Humaines et Sociales">
+                      Sciences humaines et sociales
+                    </option>
+                    <option
+                      value="Faculté des Sciences Agronomiques, Halieutique et Alimentaire">
+                      Sciences agronomiques et alimentaires
+                    </option>
+                  </select>
+                  <span class="error-msg" id="error-reg-faculty"></span>
+                </div>
+                <div class="form-group">
+                  <label for="reg-program">Programme</label>
+                  <input
+                    type="text"
+                    id="reg-program"
+                    placeholder="Ex: Informatique" />
+                  <span class="error-msg" id="error-reg-program"></span>
+                </div>
+              </div>
+
+              <div class="form-row-grid">
+                <div class="form-group">
+                  <label for="reg-level">Niveau d'études</label>
+                  <select id="reg-level">
+                    <option value="">Sélectionnez</option>
+                    <option value="L1">Licence 1 (L1)</option>
+                    <option value="L2">Licence 2 (L2)</option>
+                    <option value="L3">Licence 3 (L3)</option>
+                    <option value="L4">Licence 4 (L4)</option>
+                  </select>
+                  <span class="error-msg" id="error-reg-level"></span>
+                </div>
+                <div class="form-group">
+                  <label for="reg-year">Année académique</label>
+                  <input type="text" id="reg-year" value="2025-2026" readonly />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="reg-avatar">Photo de profil</label>
+                <div class="file-input-wrapper">
+                  <input type="file" id="reg-avatar" accept="image/*" />
+                  <span class="file-custom-label"
+                    >Sélectionner une image...</span
+                  >
+                </div>
+              </div>
+
+              <button type="submit" class="btn-pill btn-blue w-100 mt-10">
+                Créer mon compte
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. SECTION TABLEAU DE BORD DE L'ÉTUDIANT (PROFIL ET ÉVÉNEMENTS) -->
+      <section id="profile-section" class="profile-section">
+        <div class="container">
+          <div class="profile-grid">
+            <!-- Carte d'identité de l'étudiant -->
+            <div class="profile-card">
+              <div class="profile-avatar-container">
+                <img
+                  id="user-avatar"
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
+                  alt="Avatar Étudiant" />
+              </div>
+              <h2 id="user-fullname" class="user-fullname">John Doe</h2>
+              <span class="user-role-badge">Statut Étudiant</span>
+
+              <div class="profile-academic-details">
+                <div class="detail-item">
+                  <span class="detail-label">E-mail</span>
+                  <span id="user-email" class="detail-value"
+                    >john.doe@etudiant.univ.fr</span
+                  >
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Faculté</span>
+                  <span id="user-faculty" class="detail-value"
+                    >Faculté des Sciences et de génie</span
+                  >
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Programme / Dépt</span>
+                  <span id="user-program" class="detail-value"
+                    >Département d'Informatique</span
+                  >
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Niveau d'études</span>
+                  <span id="user-level" class="detail-value"
+                    >Licence 3 (L3)</span
+                  >
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Année</span>
+                  <span id="user-year" class="detail-value">2025-2026</span>
+                </div>
+              </div>
+
+              <button id="logout-btn" class="btn-logout mt-20">
+                Se déconnecter
+              </button>
+            </div>
+
+            <!-- Liste des événements rejoints -->
+            <div class="my-events-wrapper">
+              <div class="events-header-box">
+                <h3>Mes Événements Inscrits</h3>
+                <span class="events-count" id="events-counter">2 inscrits</span>
+              </div>
+
+              <!-- Liste des événements -->
+              <div class="registered-events-list" id="events-container">
+                <!-- Événement 1 -->
+                <div class="registered-event-row" data-id="event-1">
+                  <div class="event-row-info">
+                    <span class="mini-tag tag-featured">Conférence</span>
+                    <h4>
+                      Conférence internationale sur les innovations éducatives
+                    </h4>
+                    <p class="event-row-date">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2">
+                        <rect
+                          x="3"
+                          y="4"
+                          width="18"
+                          height="18"
+                          rx="2"
+                          ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                      </svg>
+                      Vendredi 15 Juin 2026 &bull; 09:00 - 17:00
+                    </p>
+                  </div>
+                  <button class="btn-cancel" aria-label="Annuler l'inscription">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polyline points="3 6 5 6 21 6"></polyline>
+                      <path
+                        d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                      <line x1="10" y1="11" x2="10" y2="17"></line>
+                      <line x1="14" y1="11" x2="14" y2="17"></line>
+                    </svg>
+                    <span>Annuler</span>
+                  </button>
+                </div>
+
+                <!-- Événement 2 -->
+                <div class="registered-event-row" data-id="event-2">
+                  <div class="event-row-info">
+                    <span class="mini-tag tag-workshop">Atelier</span>
+                    <h4>Atelier interactif de développement personnel</h4>
+                    <p class="event-row-date">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2">
+                        <rect
+                          x="3"
+                          y="4"
+                          width="18"
+                          height="18"
+                          rx="2"
+                          ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                      </svg>
+                      Mercredi 20 Juin 2026 &bull; 14:00 - 18:00
+                    </p>
+                  </div>
+                  <button class="btn-cancel" aria-label="Annuler l'inscription">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polyline points="3 6 5 6 21 6"></polyline>
+                      <path
+                        d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                      <line x1="10" y1="11" x2="10" y2="17"></line>
+                      <line x1="14" y1="11" x2="14" y2="17"></line>
+                    </svg>
+                    <span>Annuler</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER HARMONISÉ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand-column">
+            <div class="logo">
+              <img src="images/logo.svg" alt="ÉduEvent" class="logo-image" />
+              <span class="logo-text">ÉduEvent</span>
+            </div>
+            <p class="footer-brand-desc">
+              Explorez le monde, organisez vos projets de voyage en groupe et
+              créez des souvenirs impérissables.
+            </p>
+            <div class="footer-socials">
+              <a href="#" aria-label="X (Twitter)">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+                  <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+                </svg>
+              </a>
+              <a href="#" aria-label="Instagram">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path
+                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="#" aria-label="LinkedIn">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-links-column">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="#">Événements</a></li>
+              <li><a href="profil.html" class="active">Profil</a></li>
+              <li><a href="#">Détails</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-column">
+            <h4>Autres pages</h4>
+            <ul>
+              <li><a href="#">Partenaires</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2026 ÉduEvent. Tous droits réservés.
+          </p>
+          <div class="footer-legal-links">
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">Conditions d'utilisation</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPT DE VALIDATION, GESTION D'ÉTATS ET DE SUPPRESSION -->
+    <script src="js/main.js"></script>
+    <script src="js/profil.js"></script>
+  </body>
+</html>

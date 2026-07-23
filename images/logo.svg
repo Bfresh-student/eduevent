@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <!-- Circular Background Container -->
+  <circle cx="250" cy="250" r="235" fill="#ffffff" stroke="#e2e8f0" stroke-width="4"/>
+
+  <!-- ==================== LOGO MARK ==================== -->
+  <g id="logo-mark">
+    <!-- 1. "EV" MONOGRAM -->
+    <g id="monogram">
+      <!-- Letter 'E' -->
+      <path d="M 174,130 
+               H 258 
+               V 154 
+               H 196 
+               V 180 
+               H 242 
+               V 204 
+               H 196 
+               V 228 
+               H 252 
+               V 252 
+               H 174 
+               Z" 
+            fill="#153974"/>
+
+      <!-- Letter 'V' - Right Arm -->
+      <polygon points="290,252 340,130 314,130 272,226" fill="#153974"/>
+
+      <!-- Letter 'V' - Left Arm (Main) -->
+      <polygon points="252,130 290,252 260,252 232,130" fill="#153974"/>
+
+      <!-- Letter 'V' - Fold Ribbon Shadow Effect -->
+      <polygon points="252,130 290,252 272,252 242,130" fill="#0d244c" opacity="0.85"/>
+    </g>
+
+    <!-- 2. MORTARBOARD (Graduation Cap overlapping EV) -->
+    <g id="graduation-cap">
+      <!-- Cap Diamond Top -->
+      <polygon points="250,70 370,118 250,166 130,118" fill="#153974"/>
+      
+      <!-- Cap Shadow Line (bottom edge highlight) -->
+      <path d="M 130,118 L 250,166 L 370,118" stroke="#0d244c" stroke-width="2" fill="none"/>
+    </g>
+
+    <!-- 3. TASSEL -->
+    <g id="tassel">
+      <!-- Tassel String -->
+      <path d="M 340,106 Q 341,125 341,142" stroke="#f2b819" stroke-width="3" fill="none"/>
+      <!-- Tassel Ring / Button -->
+      <circle cx="341" cy="145" r="6" fill="#f2b819"/>
+      <!-- Tassel Fringe -->
+      <polygon points="334,151 348,151 351,180 331,180" fill="#f2b819"/>
+    </g>
+  </g>
+
+  <!-- ==================== TYPOGRAPHY ==================== -->
+  <!-- Main Title: EduEvent -->
+  <text x="250" y="330" 
+        font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" 
+        font-size="52" 
+        font-weight="700" 
+        fill="#153974" 
+        text-anchor="middle" 
+        letter-spacing="-0.5">
+    EduEvent
+  </text>
+
+  <!-- Subtitle: Plateforme d'Événements Éducatifs -->
+  <text x="250" y="366" 
+        font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" 
+        font-size="18" 
+        font-weight="500" 
+        fill="#153974" 
+        text-anchor="middle" 
+        letter-spacing="0.2">
+    Plateforme d'Événements Éducatifs
+  </text>
+</svg>
