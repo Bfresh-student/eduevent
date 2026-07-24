@@ -1,13 +1,21 @@
+/* === FILET DE SÉCURITÉ GLOBAL === */
+/* Empêche tout débordement horizontal résiduel sur l'ensemble du site, sur toutes les pages. */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 /* === MEDIA QUERIES === */
 
-/* --- Tablet / Large Screen Breakpoints (Up to 992px) --- */
+/* --- Points de rupture tablette / grand écran (jusqu'à 992px) --- */
 @media (max-width: 992px) {
   .hero-title {
     font-size: 40px;
   }
 
   .card-far-right {
-    display: none; /* Prevents overflow layout shifts on tablet devices */
+    display: none; /* Évite les décalages de mise en page dus au débordement sur tablette */
   }
 
   .profile-grid {
@@ -35,8 +43,8 @@
   }
 
   .details-sidebar-right {
-    position: static; /* Removes fixed/sticky positioning for better document flow */
-    order: -1; /* Places summary/actions top-most on smaller screens */
+    position: static; /* Retire le positionnement fixe/sticky pour un meilleur flux du document */
+    order: -1; /* Place le résumé/les actions en premier sur petits écrans */
   }
 
   .event-banner {
@@ -44,16 +52,16 @@
   }
 }
 
-/* --- Desktop Navigation Adaptations (769px and Up) --- */
+/* --- Adaptations de la navigation desktop (à partir de 769px) --- */
 @media (min-width: 769px) {
   .header-action {
-    margin-right: 10px; /* Aligns header CTA actions gracefully on desktop layouts */
+    margin-right: 10px; /* Aligne harmonieusement les actions du header en desktop */
   }
 }
 
-/* --- Mobile / Tablet Breakpoints (Up to 768px) --- */
+/* --- Points de rupture mobile / tablette (jusqu'à 768px) --- */
 @media (max-width: 768px) {
-  /* Navigation & Mobile Drawer */
+  /* Navigation et menu mobile (tiroir) */
   .menu-toggle {
     display: flex;
   }
@@ -61,7 +69,7 @@
   .nav {
     position: fixed;
     top: 0;
-    right: -100%; /* Hidden offscreen by default */
+    right: 0; /* Reste ancré à droite ; c'est le "transform" ci-dessous qui gère le masquage */
     width: 280px;
     height: 100vh;
     background-color: #ffffff;
@@ -69,13 +77,14 @@
     padding: 100px 32px 40px 32px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Positions the action button at the bottom */
-    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    justify-content: space-between; /* Place le bouton d'action en bas */
+    transform: translateX(100%); /* Caché hors écran sans créer de scroll horizontal fantôme (contrairement à right: -100%) */
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 1050;
   }
 
   .nav.active {
-    right: 0; /* Standard transition to slide drawer into view */
+    transform: translateX(0); /* Fait glisser le tiroir jusqu'à l'écran */
   }
 
   .nav ul {
@@ -91,7 +100,7 @@
   }
 
   .nav ul li a.active::after {
-    display: none; /* Removes active line indicator on mobile menu layout */
+    display: none; /* Supprime l'indicateur de ligne active dans le menu mobile */
   }
 
   .nav ul li a.active {
@@ -99,7 +108,7 @@
   }
 
   .header-action {
-    display: none; /* Swaps desktop login button out for drawer action */
+    display: none; /* Remplace le bouton de connexion desktop par l'action du tiroir */
     margin-right: 20px;
   }
 
@@ -114,7 +123,7 @@
     padding: 14px 0;
   }
 
-  /* Hero Section */
+  /* Section Hero */
   .hero {
     padding-top: 50px;
   }
@@ -132,7 +141,7 @@
     margin: 0 20px 20px 20px;
   }
 
-  /* Cards & Track Layouts */
+  /* Mise en page des cartes et du carrousel */
   .cards-track {
     gap: 12px;
   }
@@ -148,12 +157,12 @@
   }
 
   .floating-flag {
-    display: none; /* Prevents visual clutter on smaller tap screens */
+    display: none; /* Évite l'encombrement visuel sur petits écrans tactiles */
   }
 
-  /* Events Layout */
+  /* Mise en page des événements */
   .event-row {
-    flex-direction: column-reverse; /* Places image element above text block */
+    flex-direction: column-reverse; /* Place l'image au-dessus du bloc de texte */
     align-items: stretch;
     padding: 24px;
     gap: 20px;
@@ -177,7 +186,7 @@
     height: 180px;
   }
 
-  /* List View to Grid View Mobile Fallbacks */
+  /* Repli mobile : vue liste vers vue grille */
   .event-list.list-view .event-card {
     flex-direction: column;
     height: auto;
@@ -200,10 +209,10 @@
   }
 
   .view-toggle-group {
-    display: none; /* Hides toggle options on viewports that cannot fit dual modes */
+    display: none; /* Cache les options de bascule sur les écrans trop étroits */
   }
 
-  /* Newsletter Form */
+  /* Formulaire newsletter */
   .newsletter-card {
     padding: 40px 24px;
     border-radius: 24px;
@@ -226,13 +235,13 @@
     width: 100%;
   }
 
-  /* Statistics */
+  /* Statistiques */
   .stats .container {
     flex-direction: column;
     gap: 30px;
   }
 
-  /* Auth, Forms & Registrations */
+  /* Authentification, formulaires et inscriptions */
   .auth-card {
     padding: 24px;
     max-width: 90%;
@@ -255,7 +264,7 @@
     justify-content: center;
   }
 
-  /* Contact & About Us */
+  /* Contact et À propos */
   .about-title {
     font-size: 32px;
   }
@@ -272,7 +281,7 @@
     height: 300px;
   }
 
-  /* Footer Layout */
+  /* Mise en page du footer */
   .site-footer {
     padding: 60px 0 30px 0;
   }
@@ -288,7 +297,7 @@
   }
 
   .footer-bottom {
-    flex-direction: column-reverse; /* Places copyright below secondary links */
+    flex-direction: column-reverse; /* Place le copyright sous les liens secondaires */
     align-items: flex-start;
     gap: 16px;
   }
@@ -300,14 +309,14 @@
   }
 }
 
-/* --- Mobile Portrait Breakpoints (Up to 576px) --- */
+/* --- Points de rupture mobile portrait (jusqu'à 576px) --- */
 @media (max-width: 576px) {
   .auth-card {
     padding: 20px;
   }
 
   .about-title {
-    font-size: 28px; /* Scales down size dynamically for smaller device viewports */
+    font-size: 28px; /* Réduit dynamiquement la taille sur petits écrans */
   }
 
   .contact-form-box,
@@ -316,10 +325,10 @@
   }
 }
 
-/* --- Ultra-Small / Micro-Device Breakpoints (Up to 480px) --- */
+/* --- Points de rupture micro-écrans (jusqu'à 480px) --- */
 @media (max-width: 480px) {
   html {
-    font-size: 15px; /* Adjusts base REM unit scale for ultra-small systems */
+    font-size: 15px; /* Ajuste l'échelle de base REM pour très petits écrans */
   }
 
   .btn-pill {
@@ -436,7 +445,7 @@
   .hero-subtitle { font-size: 14px; }
 }
 
-/* Le contrôle conserve sa largeur, quelle que soit la longueur de l’option. */
+/* Le contrôle conserve sa largeur, quelle que soit la longueur de l'option. */
 .form-group select {
   display: block;
   width: 100%;
@@ -451,7 +460,7 @@
   background-repeat: no-repeat;
 }
 
-/* Fond unifié : même teinte que l’accueil. */
+/* Fond unifié : même teinte que l'accueil. */
 .profile-page,
 .events-page,
 .about-page,
@@ -668,7 +677,7 @@
   min-height: 0 !important;
 }
 
-/* Chaque élément du carrousel d’accueil reste lisible et proportionné. */
+/* Chaque élément du carrousel d'accueil reste lisible et proportionné. */
 @media (max-width: 768px) {
   .cards-track {
     width: 100%;
