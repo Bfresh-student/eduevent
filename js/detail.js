@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const dateEl = document.getElementById("event-date");
     const locEl = document.getElementById("event-location");
     const imgEl = document.getElementById("event-image");
-
+    const descriptionEl = document.getElementById("event-long-description");
     if (titleEl) titleEl.textContent = event.title;
     if (catEl) catEl.textContent = event.categoryLabel;
     if (dateEl) dateEl.textContent = `${event.date} • ${event.time}`;
@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       imgEl.src = event.imgUrl;
       imgEl.alt = event.title;
     }
+    if (descriptionEl) descriptionEl.textContent = event.longDescription;
   }
 
   // ==========================================

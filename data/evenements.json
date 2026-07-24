@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "title": "Conférence internationale sur les innovations éducatives",
-    "category": "conference",
-    "categoryLabel": "Conférence",
+    "title": "Carnaval des Étudiants",
+    "category": "culture",
+    "categoryLabel": "Culture",
     "date": "15 juin 2026",
     "dayName": "Ven",
     "dayNumber": "15",
@@ -11,24 +11,24 @@
     "time": "09:00 - 17:00",
     "period": "aujourd'hui",
     "location": "Limonade, Haiti",
-    "fullLocation": "Limonade, Haiti",
+    "fullLocation": "Campus Henry Christophe de Limonade, Limonade, Haiti",
     "imgUrl": "../images/events/upscale_this_image_2K_202607231314.jpeg",
     "featured": true,
-    "description": "Découvrez les dernières innovations et méthodes d'apprentissage lors de cette conférence exceptionnelle réunissant des experts internationaux.",
+    "description": "Découvrez la richesse culturelle du Campus Henry Christophe de Limonade lors du Carnaval des Étudiants, un événement réunissant musique, danse, créativité et traditions haïtiennes.",
     "longDescription": [
-      "Rejoignez-nous pour une conférence passionnante sur les dernières tendances en matière d'éducation. Des experts de renommée internationale partageront leurs connaissances et retours d'expériences pratiques pour inspirer et informer les participants sur les outils d'apprentissage de demain.",
-      "Au programme : tables rondes sur l'intelligence artificielle dans l'enseignement, ateliers de pédagogie active et opportunités de réseautage avec des chercheurs, professeurs et étudiants passionnés."
+      "Le Carnaval des Étudiants est une grande célébration culturelle qui rassemble les différentes facultés du Campus Henry Christophe de Limonade autour de défilés, prestations artistiques, animations musicales et expressions culturelles mettant en valeur l'identité haïtienne.",
+      "Cet événement favorise les échanges entre étudiants, renforce la cohésion universitaire et offre une plateforme aux jeunes talents pour présenter leurs créations artistiques et culturelles."
     ],
-    "organizer": "Faculté des Sciences & ÉduEvent",
+    "organizer": "Comité Culturel du Campus Henry Christophe de Limonade",
     "price": "Gratuit",
     "remainingSeats": 14,
     "totalSeats": 50
   },
   {
     "id": 2,
-    "title": "Hackathon IA : Révolutionner la Santé",
-    "category": "atelier",
-    "categoryLabel": "Atelier",
+    "title": "Conférence sur l'Intelligence Artificielle",
+    "category": "conference",
+    "categoryLabel": "Conférence",
     "date": "20 juin 2026",
     "dayName": "Mer",
     "dayNumber": "20",
@@ -36,22 +36,22 @@
     "time": "14:00 - 18:00",
     "period": "cette-semaine",
     "location": "Limonade, Haiti",
-    "fullLocation": "Limonade, Haiti",
+    "fullLocation": "Campus Henry Christophe de Limonade, Limonade, Haiti",
     "imgUrl": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80",
     "featured": false,
-    "description": "Un atelier interactif conçu pour apprendre à mieux gérer son temps, fixer des objectifs clairs et libérer son plein potentiel professionnel.",
+    "description": "Explorez les avancées de l'intelligence artificielle, ses applications concrètes et son influence sur les métiers et technologies du futur.",
     "longDescription": [
-      "Cet atelier pratique et hautement interactif vous donnera les clés pour structurer vos journées, vaincre la procrastination et développer une posture professionnelle affirmée.",
-      "À travers des exercices de mise en situation réelle et des échanges collectifs guidés par un coach spécialisé, vous repartirez avec un plan d'action personnalisé applicable dès le lendemain."
+      "Cette conférence réunira étudiants, enseignants et passionnés de technologie autour des concepts fondamentaux de l'intelligence artificielle, de ses domaines d'application et de ses opportunités dans différents secteurs professionnels.",
+      "Les discussions aborderont également les enjeux éthiques, les perspectives de recherche et les compétences nécessaires pour évoluer dans un environnement technologique en constante évolution."
     ],
-    "organizer": "Département Psychologie & Carrières",
-    "price": "45 €",
+    "organizer": "Faculté des Sciences et de Génie",
+    "price": "Gratuit",
     "remainingSeats": 25,
     "totalSeats": 30
   },
   {
     "id": 3,
-    "title": "Webinaire : Le Futur du Développement Web",
+    "title": "Webinaire : Le Futur de l'Ingénierie",
     "category": "webinaire",
     "categoryLabel": "Webinaire",
     "date": "30 juin 2026",
@@ -64,19 +64,19 @@
     "fullLocation": "Visioconférence Zoom (Lien envoyé après inscription)",
     "imgUrl": "../images/events/Upscale_this_image_2K_202607230131.jpeg",
     "featured": false,
-    "description": "Participez à notre webinaire pour explorer les tendances technologiques de demain, de l'intelligence artificielle aux frameworks modernes.",
+    "description": "Participez à un webinaire dédié aux innovations qui façonneront l'ingénierie de demain, notamment l'intelligence artificielle, l'automatisation et les systèmes intelligents.",
     "longDescription": [
-      "Quelles seront les technologies indispensables aux développeurs web dans les cinq prochaines années ? Ce webinaire décrypte l'impact de l'IA générative sur le code, l'évolution du responsive design et les nouveaux standards de performance web.",
-      "Session interactive avec période de questions-réponses en direct animée par des architectes logiciels chevronnés."
+      "Des experts présenteront les grandes transformations technologiques qui influenceront les différentes disciplines de l'ingénierie dans les prochaines années.",
+      "Les participants pourront échanger avec les intervenants autour des nouvelles compétences recherchées, des opportunités professionnelles et de l'avenir des métiers d'ingénieur."
     ],
-    "organizer": "Club Informatique Étudiant",
+    "organizer": "Faculté des Sciences et de Génie",
     "price": "Gratuit",
     "remainingSeats": 150,
     "totalSeats": 200
   },
   {
     "id": 4,
-    "title": "Tournoi de Football Inter-facultés",
+    "title": "Finale de Football : Génie vs FSS",
     "category": "sports",
     "categoryLabel": "Sports",
     "date": "22 juin 2026",
@@ -86,22 +86,22 @@
     "time": "13:00 - 19:00",
     "period": "cette-semaine",
     "location": "Limonade, Haiti",
-    "fullLocation": "Limonade, Haiti",
+    "fullLocation": "Terrain sportif du Campus Henry Christophe de Limonade, Limonade, Haiti",
     "imgUrl": "../images/events/Upscale_this_image_2K_202607230123.jpeg",
     "featured": false,
-    "description": "Venez supporter les équipes de votre fac lors du grand tournoi annuel de football de la région sud.",
+    "description": "Venez assister à la grande finale du championnat universitaire opposant la Faculté des Sciences et de Génie à la Faculté des Sciences de la Santé.",
     "longDescription": [
-      "Le tournoi annuel inter-facultés rassemble cette année 12 équipes masculines et féminines s'affrontant pour remporter la Coupe du Campus.",
-      "Restauration sur place, animations musicales, tombola et stands de nos partenaires sportifs tout au long de la journée de compétition. Venez nombreux encourager vos camarades !"
+      "Après plusieurs matchs disputés, les meilleures équipes du campus s'affrontent pour décrocher le trophée du championnat universitaire dans une ambiance sportive et conviviale.",
+      "Étudiants, enseignants et supporters sont invités à encourager leurs équipes et à partager un moment de rassemblement autour des valeurs du sport universitaire."
     ],
-    "organizer": "Association Sportive du Campus",
+    "organizer": "Association Sportive du Campus Henry Christophe de Limonade",
     "price": "Gratuit",
     "remainingSeats": 8,
     "totalSeats": 100
   },
   {
     "id": 5,
-    "title": "Cérémonie de prise de gilet et remise des diplômes à la faculté des sciences",
+    "title": "Cérémonie de prise de gilet et de blouse à la Faculté des Sciences et de Génie",
     "category": "culture",
     "categoryLabel": "Culture",
     "date": "28 juin 2026",
@@ -111,22 +111,22 @@
     "time": "10:00 - 18:00",
     "period": "ce-mois",
     "location": "Limonade, Haiti",
-    "fullLocation": "Limonade, Haiti",
+    "fullLocation": "Campus Henry Christophe de Limonade, Limonade, Haiti",
     "imgUrl": "../images/events/Upscale_this_image_2K_202607230126.jpeg",
     "featured": false,
-    "description": "Admirez les œuvres d'art originales réalisées par les étudiants de l'école des Beaux-Arts du campus.",
+    "description": "Une cérémonie symbolique célébrant l'engagement académique et professionnel des étudiants de la Faculté des Sciences et de Génie.",
     "longDescription": [
-      "Cette exposition met à l'honneur la jeune création contemporaine à travers une cinquantaine d'œuvres : peintures, sculptures, photographies et installations numériques interactives.",
-      "Le vernissage aura lieu à 11h en présence des artistes étudiants, l'occasion idéale d'échanger sur leurs inspirations, leurs parcours et leurs techniques de création."
+      "La cérémonie de prise de gilet et de blouse représente une étape importante dans le parcours universitaire des étudiants, symbolisant leur entrée progressive dans le monde professionnel.",
+      "Familles, enseignants et étudiants se réunissent pour célébrer cette tradition qui met en avant l'excellence, la discipline et les valeurs scientifiques."
     ],
-    "organizer": "Bureau des Arts (BDA)",
+    "organizer": "Faculté des Sciences et de Génie",
     "price": "Gratuit",
     "remainingSeats": 40,
     "totalSeats": 150
   },
   {
     "id": 6,
-    "title": "Commemoration du 18 novembre: Bataille de vertieres",
+    "title": "Commémoration du 18 novembre : Bataille de Vertières",
     "category": "atelier",
     "categoryLabel": "Atelier",
     "date": "15 juin 2026",
@@ -136,15 +136,15 @@
     "time": "08:00 - 20:00",
     "period": "aujourd'hui",
     "location": "Limonade, Haiti",
-    "fullLocation": "Limonade, Haiti",
+    "fullLocation": "Campus Henry Christophe de Limonade, Limonade, Haiti",
     "imgUrl": "../images/events/upscale_this_image_2K_202607230112.jpeg",
     "featured": false,
-    "description": "Relevez le défi de développer des solutions d'intelligence artificielle innovantes appliquées au secteur médical.",
+    "description": "Participez à un atelier historique consacré à la Bataille de Vertières et à son importance dans la construction de l'identité haïtienne.",
     "longDescription": [
-      "Pendant 12 heures non-stop, concevez en équipe un prototype d'intelligence artificielle pour répondre à un défi de santé publique : aide au diagnostic, suivi de patients ou optimisation des soins.",
-      "Des mentors du monde médical et de l'IA guideront les équipes. Présentation finale devant un jury professionnel avec de nombreux prix technologiques à remporter."
+      "À travers des conférences, échanges et analyses historiques, les participants découvriront le contexte de la Bataille de Vertières, son rôle dans l'indépendance d'Haïti et son héritage national.",
+      "Cet atelier vise à renforcer la mémoire historique auprès des étudiants et à encourager la réflexion sur les valeurs de courage, de liberté et de solidarité."
     ],
-    "organizer": "Toulouse Tech Hub & Faculté de Médecine",
+    "organizer": "Département des Sciences Humaines",
     "price": "Gratuit",
     "remainingSeats": 0,
     "totalSeats": 80
@@ -161,22 +161,22 @@
     "time": "18:00 - 20:00",
     "period": "cette-semaine",
     "location": "Limonade, Haiti",
-    "fullLocation": "Limonade, Haiti",
+    "fullLocation": "Campus Henry Christophe de Limonade, Limonade, Haiti",
     "imgUrl": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80",
     "featured": false,
-    "description": "Une conférence interactive pour comprendre les enjeux climatiques actuels et adopter des gestes éco-responsables.",
+    "description": "Une conférence interactive sur les changements climatiques, leurs impacts et les solutions durables adaptées aux communautés haïtiennes.",
     "longDescription": [
-      "Quelles actions concrètes un étudiant peut-il mener à son échelle pour réduire son empreinte environnementale ? Des experts du climat s'associent à des associations étudiantes locales pour dresser un bilan lucide et constructif des initiatives écologiques sur nos campus.",
-      "La conférence sera suivie d'un buffet zéro-déchet convivial propice au partage d'idées."
+      "Des spécialistes présenteront les principaux défis environnementaux actuels, notamment la déforestation, les risques naturels et les conséquences du changement climatique.",
+      "Les participants découvriront également des initiatives écologiques et des actions concrètes pouvant contribuer à un développement durable."
     ],
-    "organizer": "Réseau Campus Vert & Éco-Étudiants",
+    "organizer": "Club Environnement du Campus Henry Christophe de Limonade",
     "price": "Gratuit",
     "remainingSeats": 35,
     "totalSeats": 120
   },
   {
     "id": 8,
-    "title": "Atelier d'Initiation à la Cuisine du Monde",
+    "title": "Lancement du Pôle Sociologique du Campus",
     "category": "culture",
     "categoryLabel": "Culture",
     "date": "29 juin 2026",
@@ -186,16 +186,16 @@
     "time": "11:30 - 13:30",
     "period": "ce-mois",
     "location": "Limonade, Haiti",
-    "fullLocation": "Limonade, Haiti",
+    "fullLocation": "Campus Henry Christophe de Limonade, Limonade, Haiti",
     "imgUrl": "../images/events/upscale_the_image_2K_202607231310.jpeg",
     "featured": false,
-    "description": "Apprenez à cuisiner des plats exotiques et savoureux venus des quatre coins du globe avec nos chefs étudiants.",
+    "description": "Découvrez le lancement officiel du Pôle Sociologique du Campus Henry Christophe de Limonade, une initiative dédiée à la recherche et aux débats sociaux.",
     "longDescription": [
-      "Un voyage gustatif guidé par des étudiants internationaux ravis de faire découvrir leurs spécialités culinaires traditionnelles. Apprenez des techniques de préparation simples, économiques et adaptées à la vie étudiante.",
-      "Chaque participant met la main à la pâte avant une dégustation partagée et chaleureuse. Repartez avec votre livret de fiches recettes illustrées !"
+      "Cette cérémonie marque la création d'un espace consacré aux sciences sociales, aux échanges académiques et à l'étude des problématiques qui touchent la société haïtienne.",
+      "Enseignants, chercheurs, étudiants et partenaires institutionnels participeront à la présentation des objectifs et projets futurs du Pôle Sociologique."
     ],
-    "organizer": "Association des Étudiants Internationaux",
-    "price": "15 €",
+    "organizer": "Pôle Sociologique du Campus Henry Christophe de Limonade",
+    "price": "Gratuit",
     "remainingSeats": 12,
     "totalSeats": 20
   }
