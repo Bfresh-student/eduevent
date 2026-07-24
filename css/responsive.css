@@ -309,6 +309,56 @@ body {
   }
 }
 
+
+/* === SECTION HERO À PROPOS : adaptations responsive === */
+
+@media (max-width: 992px) {
+  .about-hero {
+    min-height: 400px;
+    padding: 120px 0 80px;
+  }
+
+  .about-hero .about-title {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    min-height: 360px;
+    padding: 100px 0 64px;
+    text-align: left;
+  }
+
+  .about-hero-content {
+    max-width: 100%;
+  }
+
+  .about-hero .about-title {
+    font-size: 32px;
+    margin: 12px 0 16px;
+  }
+
+  .about-hero .about-desc {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    padding: 88px 0 56px;
+  }
+
+  .about-hero .about-title {
+    font-size: 28px;
+  }
+
+  .about-hero .about-title br {
+    display: none; /* Évite une coupure de ligne mal placée sur petit écran */
+  }
+}
+
 /* --- Points de rupture mobile portrait (jusqu'à 576px) --- */
 @media (max-width: 576px) {
   .auth-card {
