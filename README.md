@@ -91,3 +91,6 @@ Le site comprend une navigation mobile, un lien d’accès rapide au contenu, de
 - Ajouter un espace d’administration pour publier les événements.
 - Mettre en place l’envoi réel des formulaires de contact et newsletter.
 - Ajouter des tests automatisés des parcours de réservation.
+
+# Disponible sur Netlify
+[lien du site sur netlify](https://eduevents-chcl.netlify.app/)
